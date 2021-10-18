@@ -1,0 +1,27 @@
+{
+    "name" : "GPU benchmarking p2.8x",
+    "autoscale": {
+        "min_workers": 2,
+        "max_workers": 8
+    },
+    "new_cluster": {
+    "spark_version": "9.1.x-gpu-ml-scala2.12",
+    "node_type_id": "p2.8xlarge",
+    "driver_node_type_id": "p2.8xlarge",
+
+    "aws_attributes": {
+        "first_on_demand": 1,
+        "availability": "ON_DEMAND",
+        "zone_id": "us-west-2c",
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD",
+        "ebs_volume_count": 3,
+        "ebs_volume_size": 100
+  },
+    "num_workers": 1
+  },
+    "cluster_name": "Test_benchmark_p2_8x",
+    "autotermination_minutes": 60,
+"notebook_task": {
+    "notebook_path": "/Users/srijith.rajamohan@databricks.com/GPU_benchmark"
+  }
+}
