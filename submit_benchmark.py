@@ -10,7 +10,7 @@ import pprint
 command = '/Users/srijith.rajamohan/opt/anaconda3/bin/databricks jobs create --json-file '
 job_list = []
 
-for files in glob.glob('./job_json/*.json'):
+for files in glob.glob('./job_json/cpu_jobs/*.json'):
       print("Submitting job for file %s ... " %(files))
       proc = subprocess.Popen(command + files, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
       tmp = proc.stdout.read()
